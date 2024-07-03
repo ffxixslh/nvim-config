@@ -34,7 +34,7 @@ return {
   },
   config = function()
     local conform = require "conform"
-    local utils = require "config.ffxixslh.utils"
+    local utils = require "ffxixslh.utils"
 
     conform.setup {
       formatters_by_ft = formatters_by_ft,

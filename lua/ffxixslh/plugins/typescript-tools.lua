@@ -3,8 +3,8 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
   ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
   config = function()
-    local lsp = require "config.ffxixslh.lsp"
-    local utils = require "config.ffxixslh.utils"
+    local lsp = require "ffxixslh.lsp"
+    local utils = require "ffxixslh.utils"
 
     local ok, tst = pcall(require, "typescript-tools")
 

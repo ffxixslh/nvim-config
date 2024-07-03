@@ -6,8 +6,8 @@ return {
   },
   event = 'BufReadPre',
   config = function()
-    local lsp = require 'config.ffxixslh.lsp'
-    local utils = require 'config.ffxixslh.utils'
+    local lsp = require 'ffxixslh.lsp'
+    local utils = require 'ffxixslh.utils'
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 

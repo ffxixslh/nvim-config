@@ -1,5 +1,0 @@
-require 'config.ffxixslh.options'
-require 'config.ffxixslh.remap'
-require 'config.ffxixslh.lazy'
-require 'config.ffxixslh.diagnostic'
-require 'config.ffxixslh.color'

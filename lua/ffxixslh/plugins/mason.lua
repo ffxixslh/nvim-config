@@ -9,7 +9,7 @@ return {
   config = function()
     local mason_lspconfig = require "mason-lspconfig"
     local tool_installer = require "mason-tool-installer"
-    local lsp = require "config.ffxixslh.lsp"
+    local lsp = require "ffxixslh.lsp"
 
     require("mason").setup {}
 
@@ -50,7 +50,7 @@ return {
       if serverConfig.name == "stylelint_lsp" then
         setupObject.filetypes =
         ---@diagnostic disable-next-line: deprecated
-        { "postcss", unpack(serverConfig.document_config.default_config.filetypes or {}) }
+        { "postcss", unpack(serverConfig.document_config.default_filetypes or {}) }
       end
 
       serverConfig.setup(setupObject)
