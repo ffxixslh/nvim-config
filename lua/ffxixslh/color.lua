@@ -1,3 +1,3 @@
 vim.o.termguicolors = true
 
-vim.cmd.colorscheme 'fleet'
+vim.cmd.colorscheme 'tokyonight-night'

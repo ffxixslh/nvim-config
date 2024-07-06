@@ -40,8 +40,3 @@ map.set('i', '<A-j>', '<Esc>:m .+1<cr>gi', { desc = 'Move line down' })
 map.set('n', '<A-k>', ':m .-2<cr>==', { desc = 'Move line up' })
 map.set('v', '<A-k>', ":m '<-2<cr>gv=gv", { desc = 'Move line up' })
 map.set('i', '<A-k>', '<Esc>:m .-2<cr>==gi', { desc = 'Move line up' })
-
-
--- Plugins
-map.set('v', '<C-t>', '<cmd>TransToZH<CR>', { silent = true })
-map.set('n', '<space>T', '<cmd>TransToEN<CR>')
