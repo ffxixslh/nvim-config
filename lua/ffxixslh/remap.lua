@@ -27,12 +27,6 @@ map.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 map.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 map.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Diagnostics
-map.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-map.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
-map.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
-map.set('n', '<leader>ql', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix [L]ist' })
-
 -- Move Lines
 map.set('n', '<A-j>', ':m .+1<cr>==', { desc = 'Move line down' })
 map.set('v', '<A-j>', ":m '>+1<cr>gv=gv", { desc = 'Move line down' })
