@@ -1,7 +1,5 @@
-return {
-  { 'folke/neoconf.nvim', cmd = 'Neoconf' },
-  'folke/neodev.nvim',
-  {
+return {}
+  or {
     'nvim-tree/nvim-web-devicons',
     config = function()
       require('nvim-web-devicons').setup {
@@ -18,5 +16,4 @@ return {
         strict = true,
       }
     end,
-  },
-}
+  }

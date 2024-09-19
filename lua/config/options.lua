@@ -58,10 +58,10 @@ opt.cursorline = true
 -- Highlight current line number in sidebar but don't highlight whole row
 opt.cursorlineopt = 'number'
 
-opt.tabstop = 2 -- A TAB character looks like 4 spaces
+opt.tabstop = 2      -- A TAB character looks like 4 spaces
 opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
-opt.softtabstop = 2 -- Number of spaces inserted instead of a TAB character
-opt.shiftwidth = 2 -- Number of spaces inserted when indenting
+opt.softtabstop = 2  -- Number of spaces inserted instead of a TAB character
+opt.shiftwidth = 2   -- Number of spaces inserted when indenting
 opt.smartindent = true
 
 -- Text wrap in a single line
@@ -77,8 +77,29 @@ opt.shell = vim.fn.executable 'pwsh' and 'pwsh' or 'powershell'
 
 opt.isfname:append '@-@'
 
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 300, clear = true }
-  end,
-})
+vim.diagnostic.config {
+  underline = true,
+  signs = {
+    text = {
+      ERROR = '✘',
+      WARN = '▲',
+      HINT = '⚑',
+      INFO = '»',
+    },
+  },
+  virtual_text = true,
+  float = {
+    show_header = true,
+    source = 'if_many',
+    border = 'rounded',
+    focusable = false,
+    format = function(d)
+      local t = vim.deepcopy(d)
+      local code = d.code or (d.user_data and d.user_data.lsp.code)
+      if code and not string.find(t.message, code, 1, true) then
+        t.message = string.format('%s [%s]', t.message, code):gsub('1. ', '')
+      end
+      return t.message
+    end,
+  },
+}

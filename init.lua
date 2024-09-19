@@ -1,1 +1,1 @@
-require 'ffxixslh'
+require 'config.lazy'

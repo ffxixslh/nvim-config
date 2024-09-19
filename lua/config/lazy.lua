@@ -10,13 +10,22 @@ if not vim.loop.fs_stat(lazypath) then
     lazyrepo,
     lazypath,
   }
-end ---@diagnostic disable-next-line: undefined-field
+end
 
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  spec = 'ffxixslh.plugins',
+  spec = {
+    { 'LazyVim/LazyVim', import = 'lazyvim.plugins' },
+    { import = 'plugins' },
+  },
   change_detection = { notify = false },
+  defaults = {
+    lazy = false,
+    version = false,
+  },
+  install = { colorscheme = { "catppuccin" } },
+  checker = { enabled = false },
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
