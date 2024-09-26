@@ -79,12 +79,6 @@ return {
           return config_file ~= nil
         end,
       },
-      prettierd = {
-        condition = function()
-          local config_file = find_closest_config_file(formatter_data['prettierd'])
-          return config_file ~= nil
-        end,
-      },
     },
   },
 }
