@@ -58,10 +58,10 @@ opt.cursorline = true
 -- Highlight current line number in sidebar but don't highlight whole row
 opt.cursorlineopt = 'number'
 
-opt.tabstop = 2      -- A TAB character looks like 4 spaces
+opt.tabstop = 2 -- A TAB character looks like 2 spaces
 opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
-opt.softtabstop = 2  -- Number of spaces inserted instead of a TAB character
-opt.shiftwidth = 2   -- Number of spaces inserted when indenting
+opt.softtabstop = 2 -- Number of spaces inserted instead of a TAB character
+opt.shiftwidth = 2 -- Number of spaces inserted when indenting
 opt.smartindent = true
 
 -- Text wrap in a single line
@@ -73,7 +73,7 @@ opt.undofile = true
 
 opt.showmode = false -- Don't show the mode, since it's already in status line
 
-opt.shell = vim.fn.executable 'pwsh' and 'pwsh' or 'powershell'
+opt.shell = 'zsh'
 
 opt.isfname:append '@-@'
 
