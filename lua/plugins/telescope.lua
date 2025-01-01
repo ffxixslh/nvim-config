@@ -6,6 +6,8 @@ return {
         'node_modules/',
         'dist/',
         '.next/',
+        '.umi/',
+        '.vscode/',
         '.git/',
         '.gitlab/',
         'build/',
