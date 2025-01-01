@@ -1,15 +1,15 @@
 local formatters_by_ft = {
-  css = { 'prettierd', 'stylelint' },
-  html = { 'prettierd' },
-  javascript = { 'biome', 'eslint_d', 'prettierd' },
-  javascriptreact = { 'biome', 'eslint_d', 'prettierd' },
-  json = { 'prettierd' },
-  jsonc = { 'prettierd' },
+  css = { 'prettierd', 'prettier', 'stylelint' },
+  html = { 'prettierd', 'prettier' },
+  javascript = { 'biome', 'eslint_d', 'prettierd', 'prettier' },
+  javascriptreact = { 'biome', 'eslint_d', 'prettierd', 'prettier' },
+  json = { 'prettierd', 'prettier' },
+  jsonc = { 'prettierd', 'prettier' },
   lua = { 'stylua' },
-  typescript = { 'biome', 'eslint_d', 'prettierd' },
-  typescriptreact = { 'biome', 'eslint_d', 'prettierd' },
-  vue = { 'eslint_d', 'prettierd' },
-  yaml = { 'prettierd' },
+  typescript = { 'biome', 'eslint_d', 'prettierd', 'prettier' },
+  typescriptreact = { 'biome', 'eslint_d', 'prettierd', 'prettier' },
+  vue = { 'eslint_d', 'prettierd', 'prettier' },
+  yaml = { 'prettierd', 'prettier' },
 }
 
 for _, value in pairs(formatters_by_ft) do
@@ -33,6 +33,7 @@ local formatter_data = {
   },
   eslint_d = {
     '.eslintrc',
+    '.eslintrc.js',
     '.eslintrc.json',
     'eslint.config.js',
     'eslint.config.cjs',
@@ -85,6 +86,12 @@ return {
       },
       eslint_d = {
         condition = check_formatter_config_exists 'eslint_d',
+      },
+      prettierd = {
+        condition = check_formatter_config_exists 'prettierd',
+      },
+      prettier = {
+        condition = check_formatter_config_exists 'prettier',
       },
     },
   },
