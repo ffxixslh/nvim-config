@@ -1,3 +1,3 @@
-# Ffxixslh's Neovim Configuration
+# ffxixslh's Neovim Configuration
 
-Greatly inspired by [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim.git).
+Based on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim.git).

@@ -73,7 +73,8 @@ opt.undofile = true
 
 opt.showmode = false -- Don't show the mode, since it's already in status line
 
-opt.shell = 'zsh'
+-- opt.shell = 'zsh'
+-- opt.shell = 'pwsh'
 
 opt.isfname:append '@-@'
 
