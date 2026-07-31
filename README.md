@@ -1,3 +1,3 @@
 # ffxixslh's Neovim Configuration
 
-Based on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim.git).
+Based on [LazyVim](https://github.com/LazyVim/LazyVim).
